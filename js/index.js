@@ -65,9 +65,13 @@ class ListaEnlazada{
     }
     //removeFirst   remueve el primer nodo.*
     removeFirst(){
-        this.size--
-        let current = this.head
-        this.head = current.next
+        if (this.head != null){
+            let current = this.head
+            this.size--
+            this.head = current.next
+        }else{
+            return null
+        }
 
     }
     //removeLast    remueve el ultimo nodo.*
